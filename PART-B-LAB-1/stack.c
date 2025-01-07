@@ -1,5 +1,6 @@
 #include <bits/types/stack_t.h>
 #include<stdio.h>
+#include<stdlib.h>
 
 #define SIZE 4
 
@@ -15,6 +16,7 @@ int main() {
 
 	optionFlag:
 
+	system("clear");
 	printf("\n\n-------- STACK OPERATIONS -------- \n");
 	printf("1. Push \n");
 	printf("2. Pop \n");
