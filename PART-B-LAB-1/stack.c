@@ -14,7 +14,8 @@ int main() {
 	int item, option;
 
 	optionFlag:
-	
+
+	printf("\n\n-------- STACK OPERATIONS -------- \n");
 	printf("1. Push \n");
 	printf("2. Pop \n");
 	printf("3. Display \n");
