@@ -7,8 +7,8 @@
 int STACK[SIZE], top = -1;
 
 void push(int);
-void pop();
-void display();
+void pop(void);
+void display(void);
 
 int main() {
 	
@@ -49,6 +49,7 @@ int main() {
 
 void push(int item){
 	
+	system("clear");
 	if(top==SIZE-1){
 		printf("stack overflow");
 		return;
@@ -59,7 +60,8 @@ void push(int item){
 }
 
 
-void pop(int item){
+void pop(){
+	system("clear");
 	if(top==-1){
 		printf("stack underflow");
 		return;
@@ -73,6 +75,7 @@ void pop(int item){
 
 void display() {
 
+	system("clear");
 	int i;
 
 	if(top==-1) {
