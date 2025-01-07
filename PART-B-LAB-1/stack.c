@@ -44,3 +44,42 @@ int main() {
 	return 0;
 }
 
+void push(int item){
+	
+	if(top==SIZE-1){
+		printf("stack overflow");
+		return;
+	}
+
+	top += 1 ;
+	STACK[top] = item ;
+}
+
+
+void pop(int item){
+	if(top==-1){
+		printf("stack underflow");
+		return;
+	}
+
+	printf("Popped element: %d", STACK[top]);
+	top -= 1 ;
+
+}
+
+
+void display() {
+
+	int i;
+
+	if(top==-1) {
+		printf("Stack is empty ");
+		return;
+	}
+
+	printf("STACK ELEMENTS: \n\n");
+	for (i=0; i<top; i++) {
+		printf(" %d \n",STACK[i]);
+	}
+
+}
