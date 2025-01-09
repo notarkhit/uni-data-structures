@@ -1,14 +1,19 @@
 #include <stdio.h>
 
 char getch() {
+
 	char ch;
 	ch = getchar();
-    return ch;
+	return ch;
+
 }
 
 int main() {
 
-	print("hello");
-
+	printf("hello ");
+	getch();
+	printf("World");
+	getch();
 	return 0;
+
 }
