@@ -21,6 +21,15 @@ int main() {
 	getchar();
 	system("clear");
 
+	printf("Enter array elements: \n");
+	for ( i = 0 ; i < size ; i++ ) {
+		printf("[%d]: ",i);
+		scanf("%d",&array[i]);
+	}
+	printf("Array is full!!!\t press any key to continue... ");
+	getchar();
+	system("clear");
+
 	hell:
 	printf("------ ARRAY OPERATIONS ------\n\n");
 	printf("1. Display \n\n2. Insert \n\n3. Delete \n\n4. Exit\n\nENTER OPTION : ");
