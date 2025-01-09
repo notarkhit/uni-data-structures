@@ -9,6 +9,8 @@ char getch() {
 int main() {
 
 	printf("hello");
-
+	getchar();
+	printf("world");
+	getchar();
 	return 0;
 }
