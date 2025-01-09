@@ -40,3 +40,15 @@ int main() {
 
 	return 0;
 }
+
+void traverseArray() {
+	int i ;
+
+	system("clear");
+	printf("Array Elements Are: \n");
+	for ( i = 0 ; i < size ; i++ ) {
+		printf("[%d]: %d\n", i, array[i] );
+	}
+	getchar();
+	system("clear");
+}
