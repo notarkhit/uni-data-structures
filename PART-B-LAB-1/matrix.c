@@ -8,7 +8,7 @@ char getch() {
 
 int main() {
 
-	print("hello");
+	printf("hello");
 
 	return 0;
 }
