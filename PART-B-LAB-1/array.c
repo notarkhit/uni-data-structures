@@ -36,11 +36,22 @@ int main() {
 	scanf("%d",&option);
 	
 	switch(option) {
-		case 1: break;
-		case 2: break;
-		case 3: break;
-		case 4: break;
-		default: break;
+		case 1: 
+			traverseArray();
+			break;
+		case 2:
+			/*insertElement(element, position)*/
+			break;
+		case 3: 
+			/*deleteElement(position)*/
+			break;
+		case 4: 
+			system("clear");
+			printf("\n\n\t------ EXIT ------");
+			exit(0);
+			break;
+		default: 
+			break;
 	}
 
 
