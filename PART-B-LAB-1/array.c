@@ -13,9 +13,11 @@ void deleteElement( int );
 int main() {
 	
 	int option, position, element, i;
+fkinhell:
 	clear();
 	printf("Enter the size of the array: ");
 	scanf("%d",&size);
+	if(size>20) goto fkinhell;
 	clear();
 	printf( "\n\nArray size set to : [%d] \n\n\npress any key to continue:  ", size );
 	getch();
@@ -31,7 +33,7 @@ int main() {
 	getch();
 	clear();
 
-	hell:
+hell:
 
 	printf("------ ARRAY OPERATIONS ------\n\n");
 	printf("1. Display \n\n2. Insert \n\n3. Delete \n\n4. Exit\n\nENTER OPTION : ");
@@ -82,7 +84,7 @@ void traverseArray() {
 	clear();
 	printf("Array Elements Are: \n");
 	for ( i = 0 ; i < size ; i++ ) {
-		printf("[%d]: %d\n", i, array[i] );
+		printf("[%d]:\t\t%d\n", i, array[i] );
 	}
 	getch();
 	clear();
