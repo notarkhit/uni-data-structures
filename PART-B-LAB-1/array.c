@@ -1,9 +1,8 @@
-#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <strings.h>
 
 int array[20],size;
+
 void getch() { getchar(); getchar(); }
 void clear() { system("clear"); }
 
@@ -15,14 +14,10 @@ int main() {
 	
 	int option, position, element, i;
 	clear();
-
 	printf("Enter the size of the array: ");
 	scanf("%d",&size);
-	
 	clear();
-	
-	printf( "Array size set to : %d press any key to continue:  ", size );
-	
+	printf( "\n\nArray size set to : [%d] \n\n\npress any key to continue:  ", size );
 	getch();
 	clear();
 
@@ -31,6 +26,7 @@ int main() {
 		printf("[%d]: ",i);
 		scanf("%d",&array[i]);
 	}
+
 	printf("Array is full!!!\t press any key to continue... ");
 	getch();
 	clear();
@@ -46,18 +42,31 @@ int main() {
 			traverseArray();
 			break;
 		case 2:
-			/*insertElement(element, position)*/
+			clear();
+			printf("Enter element: ");
+			scanf("%d",&element);
+			printf("Enter position: ");
+			scanf("%d",&position);
+			insertElement(element, position);
 			break;
 		case 3: 
-			/*deleteElement(position)*/
+			clear();
+			printf("Enter position: ");
+			scanf("%d",&position);
+			deleteElement(position);
 			break;
 		case 4: 
 			clear();
 			printf("\n\n\t------ EXIT ------\n");
 			getch();
+			clear();
 			exit(0);
 			break;
-		default: 
+		default:
+			clear();
+			printf("\n\n INVALID INPUT \n");
+			getch();
+			clear();
 			break;
 	}
 
@@ -80,7 +89,26 @@ void traverseArray() {
 }
 
 
-void insertElement( int element, int position ) {  }
+void insertElement( int element, int position ) { 
+	clear();
+	if( position > 0 || position < size ){
+		array[position] = element;
+		printf("Inserted %d at [%d] \n", element, position );
+	}
+	else
+		printf("Insertion not possible ");
+	getch();
+	clear();
+}
 
-void deleteElement( int position) {  }
-
+void deleteElement( int position) {
+	clear();
+	if( position > 0 || position < size ){
+		printf("Deleted %d at [%d] \n",array[position] , position);
+		array[position] = 0;
+	}
+	else
+		printf("Deletion not possible ");
+	getch();
+	clear();
+}
