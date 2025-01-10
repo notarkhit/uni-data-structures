@@ -4,7 +4,7 @@
 #include <strings.h>
 
 int array[20],size;
-
+char getch();
 void traverseArray( void );
 void insertElement( int, int );
 void deleteElement( int );
@@ -18,7 +18,7 @@ int main() {
 	scanf("%d",&size);
 	system("clear");
 	printf( "Array size set to : %d press any key to continue:  ", size );
-	getchar();
+	getch();
 	system("clear");
 
 	printf("Enter array elements: \n");
@@ -27,7 +27,7 @@ int main() {
 		scanf("%d",&array[i]);
 	}
 	printf("Array is full!!!\t press any key to continue... ");
-	getchar();
+	getch();
 	system("clear");
 
 	hell:
@@ -47,7 +47,8 @@ int main() {
 			break;
 		case 4: 
 			system("clear");
-			printf("\n\n\t------ EXIT ------");
+			printf("\n\n\t------ EXIT ------\n");
+			getch();
 			exit(0);
 			break;
 		default: 
@@ -69,6 +70,20 @@ void traverseArray() {
 	for ( i = 0 ; i < size ; i++ ) {
 		printf("[%d]: %d\n", i, array[i] );
 	}
-	getchar();
+	getch();
 	system("clear");
+}
+
+
+void insertElement( int element, int position ) {  }
+
+void deleteElement( int position) {  }
+
+char getch() { 
+	
+	char ch;
+
+	ch = getchar();
+
+	return ch;
 }
