@@ -73,5 +73,27 @@ void queueInsert( int element ) {
 	numericQueue[rear] = element;
 }
 
-void queueDelete ( void ) { }
+void queueDelete ( void ) {
+
+	clrscr();
+	if(front == -1) {
+		printf("\n\n------ Queue is Empty ------\n\n");
+		getch();
+		clrscr();
+		return;
+	}
+
+	printf("Deleted Element is : %d", numericQueue[front]);
+	if( front == rear ) {
+		front = -1;
+		rear = -1 ;
+	}
+	else {
+		front += 1 ;
+	}
+	getch();
+	clrscr();
+}
+
+
 void queueDisplay ( void ) { }
