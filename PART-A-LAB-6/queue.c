@@ -26,7 +26,7 @@ int main () {
 			case 1:
 				clrscr();
 				printf("Enter element to insert: ");
-				scanf("%d",numericElement);
+				scanf("%d",&numericElement);
 				queueInsert(numericElement);
 				break;
 			case 2: 
@@ -52,3 +52,9 @@ int main () {
 
 	return 0;
 }
+
+
+
+void queueInsert( int element ) { }
+void queueDelete ( void ) { }
+void queueDisplay ( void ) { }
