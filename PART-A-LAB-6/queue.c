@@ -96,4 +96,23 @@ void queueDelete ( void ) {
 }
 
 
-void queueDisplay ( void ) { }
+void queueDisplay ( void ) {
+	int i;
+	clrscr();
+	if(front == -1) {
+		printf("\n\n------ Queue is Empty ------\n\n");
+		getch();
+		clrscr();
+		return;
+	}
+
+	printf("QUEUE ELEMENTS ARE \n\n[FRONT] :: ");
+	for (i = front; i <= rear ; i++) {
+		printf("%d : ", numericQueue[i]);
+	}
+	printf(": [REAR]\n\n");
+	getch();
+	clrscr();
+}
+
+
