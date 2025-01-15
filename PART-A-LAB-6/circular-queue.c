@@ -25,7 +25,7 @@ int main () {
 		switch(userChoice) {
 			case 1:
 				clrscr();
-				printf("Enter element to insert: ");
+				printf("\n\n\n\n\n\nEnter element to insert: ");
 				scanf("%d",&numericElement);
 				circularQueueInsert(numericElement);
 				break;
@@ -37,13 +37,13 @@ int main () {
 				break;
 			case 4: 
 				clrscr();
-				printf("\n\n\n\t------Exit------\n");
+				printf("\n\n\n\n\n\n\t------Exit------\n");
 				getch();
 				clrscr();
 				break;
 			default:
 				clrscr();
-				printf("\n\n\n\t------ Invalid option ------\n");
+				printf("\n\n\n\n\n\n\t------ Invalid option ------\n");
 				getch();
 				clrscr();
 		}
@@ -58,7 +58,7 @@ int main () {
 void circularQueueInsert( int element ) {
 	clrscr();
 	if(((front ==-0)&&(rear == SIZE -1))||(front == rear +1 )) {
-		printf("\n\n------ Circular Queue is Full ------\n\n");
+		printf("\n\n\n\n\n\n------ Circular Queue is Full ------\n\n");
 		getch();
 		clrscr();
 		return;
@@ -81,19 +81,22 @@ void circularQueueDelete ( void ) {
 
 	clrscr();
 	if(front == -1) {
-		printf("\n\n------ Queue is Empty ------\n\n");
+		printf("\n\n\n\n\n\n------ Queue is Empty ------\n\n");
 		getch();
 		clrscr();
 		return;
 	}
 
-	printf("Deleted Element is : %d", circularNumericQueue[front]);
+	printf("\n\n\n\n\n\nDeleted Element is : %d", circularNumericQueue[front]);
 	if( front == rear ) {
 		front = -1;
 		rear = -1 ;
 	}
+	else if(front == SIZE -1) {
+		front = 0;
+	}
 	else {
-		front += 1 ;
+		front += 1;
 	}
 	getch();
 	clrscr();
@@ -104,13 +107,13 @@ void circularQueueDisplay ( void ) {
 	int i;
 	clrscr();
 	if(front == -1) {
-		printf("\n\n------ Queue is Empty ------\n\n");
+		printf("\n\n\n\n\n\n------ Circular Queue is Empty ------\n\n");
 		getch();
 		clrscr();
 		return;
 	}
 
-	printf("QUEUE ELEMENTS ARE \n\n[FRONT] ::");
+	printf("\n\n\n\n\n\nCIRCULAR QUEUE ELEMENTS ARE \n\n[FRONT] ::");
 	for (i = front; i <= rear ; i++) {
 		printf("%d :", circularNumericQueue[i]);
 	}
