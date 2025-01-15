@@ -55,6 +55,23 @@ int main () {
 
 
 
-void queueInsert( int element ) { }
+void queueInsert( int element ) {
+	clrscr();
+	if(rear == SIZE -1) {
+		printf("\n\n------ Queue is Full ------\n\n");
+		getch();
+		clrscr();
+		return;
+	}
+	if(front == -1) {
+		front = 0;
+		rear = 0;
+	}
+	else {
+		rear += 1;
+	}
+	numericQueue[rear] = element;
+}
+
 void queueDelete ( void ) { }
 void queueDisplay ( void ) { }
