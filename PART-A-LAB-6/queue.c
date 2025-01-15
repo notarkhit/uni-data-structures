@@ -19,7 +19,7 @@ int main () {
 	clrscr();
 
 		printf("------ QUEUE OPERATIONS ------ \n");
-		printf("\t[1]\tInsert\n\t[2]\tDelete\n\t[3]\tDisplay\n\t[4]\tExit\n\n\tEnter option:\t>");
+		printf("\t[1]\tInsert\n\t[2]\tDelete\n\t[3]\tDisplay\n\t[4]\tExit\n\n\tEnter option:\t>> ");
 		scanf("%d",&userChoice);
 
 		switch(userChoice) {
@@ -106,9 +106,9 @@ void queueDisplay ( void ) {
 		return;
 	}
 
-	printf("QUEUE ELEMENTS ARE \n\n[FRONT] :: ");
+	printf("QUEUE ELEMENTS ARE \n\n[FRONT] ::");
 	for (i = front; i <= rear ; i++) {
-		printf("%d : ", numericQueue[i]);
+		printf("%d :", numericQueue[i]);
 	}
 	printf(": [REAR]\n\n");
 	getch();
