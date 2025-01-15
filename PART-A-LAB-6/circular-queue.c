@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #define SIZE 5
 
-int numericQueue[SIZE], front = -1, rear =  -1;
+int circularNumericQueue[SIZE], front = -1, rear =  -1;
 
 void getch() { getchar(); getchar(); }
 void clrscr() { system("clear"); }
 
-void queueInsert( int );
-void queueDelete ( void );
-void queueDisplay ( void );
+void circularQueueInsert( int );
+void circularQueueDelete ( void );
+void circularQueueDisplay ( void );
 
 int main () { 
 
@@ -27,13 +27,13 @@ int main () {
 				clrscr();
 				printf("Enter element to insert: ");
 				scanf("%d",&numericElement);
-				queueInsert(numericElement);
+				circularQueueInsert(numericElement);
 				break;
 			case 2: 
-				queueDelete();
+				circularQueueDelete();
 				break;
 			case 3: 
-				queueDisplay();
+				circularQueueDisplay();
 				break;
 			case 4: 
 				clrscr();
@@ -55,10 +55,10 @@ int main () {
 
 
 
-void queueInsert( int element ) {
+void circularQueueInsert( int element ) {
 	clrscr();
-	if(rear == SIZE -1) {
-		printf("\n\n------ Queue is Full ------\n\n");
+	if(((front ==-0)&&(rear == SIZE -1))||(front == rear +1 )) {
+		printf("\n\n------ Circular Queue is Full ------\n\n");
 		getch();
 		clrscr();
 		return;
@@ -67,13 +67,17 @@ void queueInsert( int element ) {
 		front = 0;
 		rear = 0;
 	}
-	else {
-		rear += 1;
+	else if (rear == SIZE -1){
+		rear = 0;
 	}
-	numericQueue[rear] = element;
+	else {
+	rear++;
+	}
+
+	circularNumericQueue[rear] = element;
 }
 
-void queueDelete ( void ) {
+void circularQueueDelete ( void ) {
 
 	clrscr();
 	if(front == -1) {
@@ -83,7 +87,7 @@ void queueDelete ( void ) {
 		return;
 	}
 
-	printf("Deleted Element is : %d", numericQueue[front]);
+	printf("Deleted Element is : %d", circularNumericQueue[front]);
 	if( front == rear ) {
 		front = -1;
 		rear = -1 ;
@@ -96,7 +100,7 @@ void queueDelete ( void ) {
 }
 
 
-void queueDisplay ( void ) {
+void circularQueueDisplay ( void ) {
 	int i;
 	clrscr();
 	if(front == -1) {
@@ -108,7 +112,7 @@ void queueDisplay ( void ) {
 
 	printf("QUEUE ELEMENTS ARE \n\n[FRONT] ::");
 	for (i = front; i <= rear ; i++) {
-		printf("%d :", numericQueue[i]);
+		printf("%d :", circularNumericQueue[i]);
 	}
 	printf(": [REAR]\n\n");
 	getch();
