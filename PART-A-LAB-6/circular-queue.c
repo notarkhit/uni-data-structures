@@ -103,6 +103,26 @@ void circularQueueDelete ( void ) {
 }
 
 
+/*void circularQueueDisplay ( void ) {*/
+/*	int i;*/
+/*	clrscr();*/
+/*	if(front == -1) {*/
+/*		printf("\n\n\n\n\n\n------ Circular Queue is Empty ------\n\n");*/
+/*		getch();*/
+/*		clrscr();*/
+/*		return;*/
+/*	}*/
+/**/
+/*	printf("\n\n\n\n\n\nCIRCULAR QUEUE ELEMENTS ARE \n\n[FRONT] ::");*/
+/*	for (i = front; i <= rear ; i++) {*/
+/*		printf("%d :", circularNumericQueue[i]);*/
+/*	}*/
+/*	printf(": [REAR]\n\n");*/
+/*	getch();*/
+/*	clrscr();*/
+/*}*/
+
+
 void circularQueueDisplay ( void ) {
 	int i;
 	clrscr();
@@ -114,12 +134,23 @@ void circularQueueDisplay ( void ) {
 	}
 
 	printf("\n\n\n\n\n\nCIRCULAR QUEUE ELEMENTS ARE \n\n[FRONT] ::");
-	for (i = front; i <= rear ; i++) {
+
+	if (front <= rear) {
+		for (i = front; i <= rear ; i++) {
+			printf("%d :", circularNumericQueue[i]);
+		}
+	}
+	else {
+		for (i = front; i <= SIZE-1 ; i++) {
+			printf("%d :", circularNumericQueue[i]);
+		}
+	}
+	for (i = 0; i <= rear ; i++) {
 		printf("%d :", circularNumericQueue[i]);
 	}
+
 	printf(": [REAR]\n\n");
 	getch();
 	clrscr();
 }
-
 
