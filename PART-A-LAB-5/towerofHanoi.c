@@ -23,6 +23,7 @@ void tower(int n, char s, char t, char d ) {
 		return;
 	}
 	tower(n-1, s, d, t );
-	printf("move drink %d from %c to %c\n", n, s, d);
+	/*printf("move drink %d from %c to %c\n", n, s, d);*/
+	printf("%d | %c %c \n", n, s, d );
 	tower(n-1, s, d, t );
 }
