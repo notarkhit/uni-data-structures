@@ -19,15 +19,15 @@ int main() {
 	printf("Enter second string: ");
 	fgets(string2, MAX_LEN, stdin);
 
-	printf("the strings are %s", (strComp(string1, string2))? "not equal" : "equal" );
-	printf("concatenated: %s", strCat(string1,string2));
+	printf("\nthe strings are %s", (strComp(string1, string2))? "not equal" : "equal" );
+	printf("\nlengths %d and %d", strLen(string1), strLen(string2));
+	printf("\nconcatenated: %s", strCat(string1,string2));
+
 }
 
 
 int strLen(char *str){
-	int size;
-	for(size = 0; str[size]!='\0'; size++);
-	return size;
+	return (*str == '\0') ? 0 : ( 1 + strLen(str + 1) );
 }
 
 int strComp(char* str1, char* str2){
@@ -38,5 +38,10 @@ int strComp(char* str1, char* str2){
 }
 
 char* strCat(char *str1, char *str2) {
-	return (*str1 == '/0'):;
+	if ( (*str1 == '\0') && (*str2 == '\0') ) return str1;
+
+	(*str1 == '\0') ? *str1 = *str2, *(str1 + 1) = '\0', strCat(str1+1,str2+1) :
+		strCat(str1+1,str2);
+
+	return str1;
 }
