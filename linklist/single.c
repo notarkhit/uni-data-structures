@@ -12,7 +12,7 @@ struct node {
 
 typedef struct node* NODE;
 
-NODE createNode(NODE);
+NODE createNode(NODE, int);
 NODE getnode();
 void traverse(NODE);
 
@@ -64,7 +64,7 @@ menu:
 			break;
 		
 		case 4: 
-			setcolor(blue);
+			setcolor(cyan);
 			printf("\nExit Program \n");
 			getch();
 			clear();
@@ -82,3 +82,23 @@ menu:
 
 	return 0;
 }
+
+NODE createNode(NODE head, int element) {
+	NODE temp;
+	temp = head;
+	if (temp == NULL) {
+		temp->data = element;
+		temp->next = NULL;
+		return temp;
+	}
+
+	while(temp->next != NULL) {
+		temp = temp->next;
+	}
+
+	return temp;
+}
+
+NODE getnode();
+
+void traverse(NODE);
