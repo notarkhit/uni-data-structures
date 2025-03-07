@@ -53,7 +53,7 @@ menu:
 			printf("\nEnter the element to insert >> ");
 			setcolor(white);
 			scanf("%d",&element);
-			/*createNode(head);*/
+			/*createNode(head,element);*/
 			break;
 		
 		case 3:

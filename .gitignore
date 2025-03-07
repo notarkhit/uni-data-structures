@@ -3,6 +3,7 @@
 
 # Allow .c files in any directory
 !**/*.c
+!**/*.h
 
 # Allow directories so that .c files inside them can be tracked
 !*/
