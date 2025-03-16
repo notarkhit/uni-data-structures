@@ -9,7 +9,6 @@ void getch() { getchar(); getchar(); };
 
 int strComp(char*, char*);
 int strLen(char *);
-char* strCat(char*, char*);
 
 int main() {
 	char string1[MAX_LEN], string2[MAX_LEN];
@@ -21,7 +20,6 @@ int main() {
 
 	printf("\nthe strings are %s", (strComp(string1, string2))? "not equal" : "equal" );
 	printf("\nlengths %d and %d", strLen(string1), strLen(string2));
-	printf("\nconcatenated: %s", strCat(string1,string2));
 
 }
 
@@ -37,11 +35,3 @@ int strComp(char* str1, char* str2){
 		strComp(str1 + 1, str2 + 1 );
 }
 
-char* strCat(char *str1, char *str2) {
-	if ( (*str1 == '\0') && (*str2 == '\0') ) return str1;
-
-	(*str1 == '\0') ? *str1 = *str2, *(str1 + 1) = '\0', strCat(str1+1,str2+1) :
-		strCat(str1+1,str2);
-
-	return str1;
-}
