@@ -25,14 +25,12 @@ int main()
 		scanf("%d", &array[i] );
 	}
 
-
 	printf("Array elements : \n");
 	for (i = 0; i < arraySize; ++i) {
 		printf("array [%d] : %d \n", i , array[i] );
 	}
 	
 	do {
-
 		printf("--- Array operations --- ");
 		printf("\n1. Insertion \n2. Deletion \n3. Exit\n\n[YOUR CHOICE]: ");
 		scanf("%d", &option);
@@ -45,7 +43,7 @@ int main()
 			default:;
 		}
 
-	}while(1);
+	} while(1);
 	
 	return 0;
 }
@@ -57,7 +55,4 @@ void insert(int fnArray[], int insElement, int insertPos)
 		printf("\n\ninsertion not possible\n\n");
 		return;
 	}
-
-	
-
 }
