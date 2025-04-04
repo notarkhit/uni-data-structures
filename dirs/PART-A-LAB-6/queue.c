@@ -108,7 +108,7 @@ void queueDisplay ( void ) {
 
 	printf("QUEUE ELEMENTS ARE \n\n[FRONT] ::");
 	for (i = front; i <= rear ; i++) {
-		printf("%d :", numericQueue[i]);
+		printf(" %d :", numericQueue[i]);
 	}
 	printf(": [REAR]\n\n");
 	getch();
