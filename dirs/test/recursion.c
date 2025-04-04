@@ -13,15 +13,18 @@ int main () {
 
 	printf("factorial: %d\n", fact);
 
-
 	return 0;
 }
 
 int factorial (int number ) {
-	if(number == 0) {
+	if(number == 0) 
 		return 1;
-	}
-	else {
+	else 
 		return (number * factorial(number-1));
-	}
 }
+
+/*
+int factorial (int number ) {
+	return (number == 0) ? 1 : (number * factorial(number-1));
+}
+*/
